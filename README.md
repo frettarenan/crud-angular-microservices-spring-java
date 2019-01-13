@@ -7,6 +7,7 @@ Esta aplicação foi desenvolvida no Windows 10 64 bits e utilizei as seguintes 
 * Eclipse STS4 64 bits (Spring Tools 4 for Eclipse). Disponível em: https://spring.io/tools
 * DBeaver Community Edition 5.3.2 64 bits. Disponível em: https://dbeaver.io/download
 * Visual Studio Code 1.30.2 64 bits. Disponível em: https://code.visualstudio.com/Download
+* NodeJS 11.6.0 64 bits. Disponível em: https://nodejs.org/en/download/current
 * Apache Maven 3.6.0. Disponível em: https://maven.apache.org/download.cgi
 * Screenpresso 1.7.3 64 bits. Disponível em: https://www.screenpresso.com/download
 
