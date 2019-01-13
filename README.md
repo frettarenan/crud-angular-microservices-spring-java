@@ -10,3 +10,5 @@ Esta aplicação foi desenvolvida no Windows 10 64 bits e utilizei as seguintes 
 * Apache Maven 3.6.0. Disponível em: https://maven.apache.org/download.cgi
 
 # Procedimento de configuração do Docker no Windows 10
+
+Passo 1: 
