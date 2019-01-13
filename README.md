@@ -19,3 +19,6 @@ Esta aplicação foi desenvolvida no Windows 10 64 bits e utilizei as seguintes 
 
 **Passo 3:** Clique novamente com o botão direito do mouse sobre o ícone do Docker localizado ao lado do relógio do Windows. No menu que se abri-rá, clique na opção "Settings". Conforme ilustra a imagem:
 ![Ilustração do passo 3 da configuração do Docker](documentation/docker-03.png?raw=true "Ilustração do passo 3 da configuração do Docker")
+
+**Passo 4:** Na tela que se abri-rá, clique na opção "Shared Drives", localizado no menu à esquerda. Em seguinda, selecione um drive do seu computador para compartilhar com o Docker. Conforme ilustra a imagem:
+![Ilustração do passo 4 da configuração do Docker](documentation/docker-04.png?raw=true "Ilustração do passo 4 da configuração do Docker")
