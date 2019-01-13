@@ -1,4 +1,4 @@
-package br.com.renanfretta.crud.resource;
+package br.com.renanfretta.crud.resources;
 
 import java.util.List;
 
@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.renanfretta.crud.model.Usuario;
-import br.com.renanfretta.crud.repository.UsuarioRepository;
+import br.com.renanfretta.crud.models.Usuario;
+import br.com.renanfretta.crud.repositories.UsuarioRepository;
 
 @RestController
 @RequestMapping("/usuario")

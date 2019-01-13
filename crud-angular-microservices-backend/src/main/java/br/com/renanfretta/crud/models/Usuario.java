@@ -1,4 +1,4 @@
-package br.com.renanfretta.crud.model;
+package br.com.renanfretta.crud.models;
 
 import java.sql.Date;
 
