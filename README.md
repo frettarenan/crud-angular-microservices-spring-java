@@ -8,6 +8,7 @@ Esta aplicação foi desenvolvida no Windows 10 64 bits e utilizei as seguintes 
 * DBeaver Community Edition 5.3.2 64 bits. Disponível em: https://dbeaver.io/download
 * Visual Studio Code 1.30.2 64 bits. Disponível em: https://code.visualstudio.com/Download
 * Apache Maven 3.6.0. Disponível em: https://maven.apache.org/download.cgi
+* Screenpresso 1.7.3 64 bits. Disponível em: https://www.screenpresso.com/download
 
 # Procedimento de configuração do Docker no Windows 10
 
