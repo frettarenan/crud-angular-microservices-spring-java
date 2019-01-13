@@ -1,6 +1,7 @@
 package br.com.renanfretta.crud.resources;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
@@ -30,8 +31,8 @@ public class UsuarioResource {
 
 	@GetMapping("/{id}")
 	public ResponseEntity<Usuario> buscarPeloCodigo(@PathVariable Long id) {
-		Usuario usuario = usuarioRepository.findOne(id);
-		return usuario != null ? ResponseEntity.ok(usuario) : ResponseEntity.notFound().build();
+		Optional<Usuario> usuario = usuarioRepository.findById(id);
+		return usuario.isPresent() ? ResponseEntity.ok(usuario.get()) : ResponseEntity.notFound().build();
 	}
 	
 	@GetMapping
@@ -48,7 +49,7 @@ public class UsuarioResource {
 	@DeleteMapping("/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void remover(@PathVariable Long id) {
-		usuarioRepository.delete(id);
+		usuarioRepository.deleteById(id);
 	}
 
 	@PutMapping
