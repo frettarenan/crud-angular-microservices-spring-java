@@ -12,3 +12,4 @@ Esta aplicação foi desenvolvida no Windows 10 64 bits e utilizei as seguintes 
 # Procedimento de configuração do Docker no Windows 10
 
 Passo 1: 
+![Ícone do Docker localizado ao lado do relógio do Windows](documentation/docker-01.png?raw=true "Ícone do Docker localizado ao lado do relógio do Windows")
