@@ -1,6 +1,6 @@
 version: '3'
 services:
-  mysql:
+  mysql-crud-renan-fretta:
     container_name: mysql-crud-renan-fretta
     image: mysql:5.7
     environment:
@@ -10,3 +10,17 @@ services:
       MYSQL_PASSWORD: renan123
     ports:
       - "3306:3306"
+  backend-crud-renan-fretta:
+    container_name: backend-crud-renan-fretta
+    restart: always
+    build: ./crud-angular-microservices-backend
+    working_dir: /crud-angular-microservices-backend
+    volumes:
+      - ./crud-angular-microservices-backend:/crud-angular-microservices-backend
+    ports:
+      - 8080:8080
+    expose:
+      - "8080"
+    command: mvn clean install spring-boot:run
+    depends_on:
+      - mysql-crud-renan-fretta
