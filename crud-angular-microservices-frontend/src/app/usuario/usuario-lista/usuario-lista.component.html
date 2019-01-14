@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <h1>Lista de usuários</h1>
+    </div>
+    <div class="ui-g-12">
+      <p-dataTable [value]="usuarios"
+                   [responsive]="true"
+                   emptyMessage="Nenhum usuário encontrado"
+                   [paginator]="false"
+                   #tabela>
+        <p-column field="id" header="ID" [style]="{'width':'100px'}"></p-column>
+        <p-column field="nome" header="Nome"></p-column>
+        <p-column header="Data do cadastro" styleClass="col-data" [style]="{'width':'200px'}">
+            <ng-template let-usuario="rowData" pTemplate="body">
+                <span>{{ usuario.dataCadastro | date:'MM/dd/yyyy HH:mm:ss' }}</span>
+            </ng-template>
+        </p-column>
+        <p-column header="Situação" [style]="{'width':'100px'}">
+          <ng-template let-usuario="rowData" pTemplate="body">
+            <span [style.color]="usuario.ativo === true ? 'green' : 'red'">{{usuario.ativo ? 'Ativo' : 'Inativo'}}</span>
+          </ng-template>
+        </p-column>
+        <p-column header="Ações" styleClass="col-acoes">
+            <ng-template let-usuario="rowData" pTemplate="body">
+              <a pButton icon="fa-pencil" pTooltip="Editar"
+                tooltipPosition="top"
+                [routerLink]="['/usuarios', usuario.id]"></a>
+              <button pButton icon="fa-trash"
+                pTooltip="Excluir" tooltipPosition="top"
+                (click)="confirmarExclusao(usuario)"></button>
+            </ng-template>
+        </p-column>
+      </p-dataTable>
+    </div>
+
+    <div class="ui-g-12">
+      <a pButton label="Cadastrar novo usuário" routerLink="/usuarios/novo"></a>
+    </div>
+
+  </div>
+
+</div>

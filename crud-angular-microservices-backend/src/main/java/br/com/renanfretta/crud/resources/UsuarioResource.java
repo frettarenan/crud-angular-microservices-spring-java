@@ -1,5 +1,6 @@
 package br.com.renanfretta.crud.resources;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +24,7 @@ import br.com.renanfretta.crud.models.Usuario;
 import br.com.renanfretta.crud.repositories.UsuarioRepository;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/usuarios")
 public class UsuarioResource {
 
 	@Autowired
@@ -42,6 +43,7 @@ public class UsuarioResource {
 
 	@PostMapping
 	public ResponseEntity<Usuario> cadastrar(@Valid @RequestBody Usuario usuario, HttpServletResponse response) {
+		usuario.setDataCadastro(new Date());
 		Usuario usuarioSalvo = usuarioRepository.save(usuario);
 		return ResponseEntity.status(HttpStatus.CREATED).body(usuarioSalvo);
 	}

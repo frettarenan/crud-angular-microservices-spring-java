@@ -1,0 +1,42 @@
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
+
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <h1>Cadastro de usuário</h1>
+      </div>
+
+      <div class="ui-g-6 ui-md-2 ui-fluid">
+          <label>ID</label>
+          <input pInputText type="text" name="id" [ngModel]="usuario.id" readonly>
+      </div>
+
+      <div class="ui-g-6 ui-md-2 ui-fluid">
+          <label>Data do cadastro</label>
+          <input pInputText type="text" name="dataCadastro" [ngModel]="usuario.dataCadastro | date:'MM/dd/yyyy HH:mm:ss'" readonly>
+      </div>
+
+      <div class="ui-g-12 ui-md-9 ui-fluid">
+          <label>Nome</label>
+          <input pInputText type="text" name="nome"
+            [(ngModel)]="usuario.nome"
+            #nome="ngModel" required>
+          <app-message [control]="nome" error="required"
+            text="Preencha o campo nome"></app-message>
+      </div>
+
+      <div class="ui-g-12">
+        <p-selectButton name="ativo" [options]="situacoes"
+          [(ngModel)]="usuario.ativo"
+          #ativo></p-selectButton>
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Salvar" [disabled]="f.invalid"></button>
+        <button pButton type="button" label="Novo" class="ui-button-info" (click)="novo(f)"></button>
+        <a routerLink="/usuarios">Voltar para a lista de usuários</a>
+      </div>
+    </div>
+
+  </form>
+</div>
