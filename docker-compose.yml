@@ -1,6 +1,7 @@
 version: '3'
 services:
-  db:
+  mysql:
+    container_name: mysql-crud-renan-fretta
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: root123
