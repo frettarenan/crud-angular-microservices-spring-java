@@ -24,3 +24,11 @@ services:
     command: mvn clean install spring-boot:run
     depends_on:
       - mysql-crud-renan-fretta
+  frontend-crud-renan-fretta:
+    container_name: frontend-crud-renan-fretta
+    hostname: localhost
+    build: ./crud-angular-microservices-frontend
+    ports:
+      - 80:80
+    depends_on:
+      - backend-crud-renan-fretta
